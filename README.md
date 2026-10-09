@@ -1,48 +1,34 @@
-# 🌐 Diagnóstico do PC e da Rede 🇧🇷
+# 🔍 Diagnóstico do PC e da Rede 🇧🇷
 
-Coleta relatório detalhado de hardware, Windows e rede.
+<div align="center">
 
-[![Documentação](https://img.shields.io/badge/DOCUMENTA%C3%87%C3%83O-PORTUGU%C3%8AS%20(BRASIL)-green?style=for-the-badge)](README.md) [![Documentation](https://img.shields.io/badge/DOCUMENTATION-ENGLISH-0070F3?style=for-the-badge)](README-EN.md)
+**🌐 Idiomas / Languages:**  
+[![Documentação PT-BR](https://img.shields.io/badge/Documenta%C3%A7%C3%A3o-Portugu%C3%AAs%20(Brasil)-green?style=for-the-badge)](README.md)
+[![Documentation EN](https://img.shields.io/badge/Documentation-English-0070F3?style=for-the-badge)](README-EN.md)
 
-![Versão](https://img.shields.io/badge/Vers%C3%A3o-v1.0.0-blue?style=flat-square) ![Licença](https://img.shields.io/badge/Licen%C3%A7a-MIT-green?style=flat-square) ![Plataforma](https://img.shields.io/badge/Plataforma-Windows-0078D4?style=flat-square) ![Idiomas](https://img.shields.io/badge/Idiomas-10%20auto--detectados-2ea44f?style=flat-square)
+![Versão](https://img.shields.io/badge/Vers%C3%A3o-v1.0.0-blue?style=for-the-badge)
+![Licença](https://img.shields.io/badge/Licen%C3%A7a-MIT-green?style=for-the-badge)
+![Plataforma](https://img.shields.io/badge/Plataforma-Windows%2010%20%7C%2011-0078D4?style=for-the-badge)
+![Diagnóstico](https://img.shields.io/badge/Motor-WMI%20%2F%20CIM-blueviolet?style=for-the-badge)
 
-[Changelog PT-BR](CHANGELOG-PT-BR.md) · [English changelog](CHANGELOG-EN.md) · [Licença MIT](LICENSE)
+</div>
 
 ---
-## Arquivos
 
-PC-Network-Diagnostics.bat (arquivo único; coletor integrado)
+Utilitário em Batch de diagnóstico completo de hardware, integridade de componentes do sistema operacional e status detalhado de adaptadores de rede.
 
-## Como usar
+## 🚀 Principais Recursos
+- **Inventário de Hardware:** Detalhes de Processador, Placa-mãe, Memória RAM, Discos e GPUs.
+- **Auditoria de Conectividade:** Análise de IP, Gateway, DNS, rotas ativas e pings de latência.
+- **Saúde do Sistema:** Uptime, versão da compilação do Windows e integridade de serviços críticos.
+- **Execução Leve:** Sem instalação, roda direto no console via WMI nativo.
 
-1. Baixe ou clone o repositório completo.
-2. Execute `PC-Network-Diagnostics.bat` para gerar o relatório. A coleta não redefine a rede.
+## 📦 Como Usar
+1. Baixe o pacote na seção [Releases](https://github.com/Emertels/PC-Network-Diagnostics/releases/latest).
+2. Execute `PC-Network-Diagnostics.bat` como Administrador.
+3. Escolha o módulo de diagnóstico no menu interativo para visualizar o relatório.
 
-## Requisitos
-
-Windows 7 ou posterior e Windows PowerShell 2.0 ou posterior, já integrado ao arquivo Batch. O script usa WMI como caminho compatível e aproveita cmdlets de armazenamento/CIM quando disponíveis. Alguns campos variam conforme o hardware, os drivers e a versão do Windows; sistemas sem PowerShell instalado precisam instalá-lo antes.
-
-## Seções do relatório
-
-A coleta é informativa e não altera a rede. O relatório mostra: **1)** Windows e hardware (placa-mãe/BIOS, CPU, vídeo, RAM, discos e monitor); **2)** adaptador ativo, IPv4, máscara, gateway e MAC; **3)** tipo e velocidade da conexão; **4)** resolução DNS; **5–6)** quatro medições de ping a `1.1.1.1` e `8.8.8.8`, com perda/estatísticas disponíveis; **7)** tráfego enviado/recebido; **8)** resumo da qualidade. A consulta de IP público depende de serviço externo. Campos ausentes indicam dado indisponível, não necessariamente falha geral. DNS, ICMP e estado da rede influenciam os resultados.
-
-### Idiomas disponíveis
-
-Detectados pela configuração do Windows; PT-BR é o fallback.
-
-| Idioma | Código | Uso |
-|---|---|
-| Português (Brasil) | pt-BR | Interface PT-BR; também é o idioma alternativo. |
-| Inglês | en | Interface em inglês. |
-| Espanhol | es | Interface em espanhol. |
-| Francês | fr | Interface em francês. |
-| Alemão | de | Interface em alemão. |
-| Italiano | it | Interface em italiano. |
-| Japonês | ja | Interface em japonês. |
-| Coreano | ko | Interface em coreano. |
-| Chinês simplificado | zh-CN | Interface em chinês simplificado. |
-| Russo | ru | Interface em russo. |
-
+---
 ## 👨‍💻 Sobre o Autor
 
 Desenvolvido e mantido por **Emerson Teles** (conhecido na comunidade como **Emertels**).
