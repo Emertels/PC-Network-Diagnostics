@@ -2,6 +2,8 @@
 
 ## 1.0.0 — 2026-10-09
 
+- Reorganiza a documentação: README principal em PT-BR, versão independente em inglês e instruções específicas das opções/etapas deste projeto.
+
 - Corrige as instruções de execução para apontar diretamente para o arquivo correto do projeto.
 
 - Consolida o diagnóstico e o coletor em um único arquivo .bat, aproxima a apresentação do relatório ao formato original e mantém as cores.

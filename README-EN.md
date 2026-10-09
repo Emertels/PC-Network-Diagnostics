@@ -1,12 +1,14 @@
-# PC and Network Diagnostics
-
-**Version:** 1.0.0  
-**Interface languages:** Brazilian Portuguese, English, Spanish, French, German, Italian, Japanese, Korean, Simplified Chinese, and Russian. The program detects Windows UI culture and uses Brazilian Portuguese for unsupported locales.
-
-## What it does
+# 🌐 PC and Network Diagnostics
 
 Collect a detailed Windows hardware, operating system, and network report.
 
+[![Português (Brasil)](https://img.shields.io/badge/DOCUMENTA%C3%87%C3%83O-PORTUGU%C3%8AS%20(BRASIL)-green?style=for-the-badge)](README.md) [![Documentation](https://img.shields.io/badge/DOCUMENTATION-ENGLISH-0070F3?style=for-the-badge)](README-EN.md)
+
+![Version](https://img.shields.io/badge/Version-v1.0.0-blue?style=flat-square) ![License](https://img.shields.io/badge/License-MIT-green?style=flat-square) ![Platform](https://img.shields.io/badge/Platform-Windows-0078D4?style=flat-square) ![Languages](https://img.shields.io/badge/Languages-10%20auto--detected-2ea44f?style=flat-square)
+
+[Portuguese changelog](CHANGELOG-PT-BR.md) · [English changelog](CHANGELOG-EN.md) · [MIT License](LICENSE)
+
+---
 ## Files
 
 PC-Network-Diagnostics.bat (single file; collector embedded)
@@ -20,36 +22,26 @@ PC-Network-Diagnostics.bat (single file; collector embedded)
 
 Windows 7 or later and Windows PowerShell 2.0 or later, embedded in the Batch file. The script uses WMI for compatibility and uses CIM/storage cmdlets when available. Some fields vary by hardware, drivers, and Windows version; systems without PowerShell installed must install it first.
 
-## Safety and limitations
+## Report sections
 
-The project must not remove personal data, credentials, or content outside paths defined by the tool. Command and feature availability depends on Windows edition and version. Review CHANGELOG.md before updating.
+Collection is informational and does not change network settings. The report shows: **1)** Windows and hardware (motherboard/BIOS, CPU, graphics, memory, drives, monitor); **2)** active adapter, IPv4, mask, gateway, MAC; **3)** connection type and link speed; **4)** DNS resolution; **5–6)** four pings to `1.1.1.1` and `8.8.8.8`, with available loss/statistics; **7)** sent/received traffic; **8)** a quality summary. Public IP lookup depends on an external service. Missing fields mean unavailable data, not necessarily a failed report. DNS, ICMP, and network state affect results.
 
-## Development
+### Available languages
 
-See AGENTS-PT-BR.md and AGENTS-EN.md. The default interface language follows Windows UI culture; Brazilian Portuguese is the fallback.
+Detected from Windows settings; Brazilian Portuguese is the fallback.
 
-## Languages, purpose, and tips
-
-The interface supports Brazilian Portuguese, English, Spanish, French, German, Italian, Japanese, Korean, Simplified Chinese, and Russian. It detects Windows UI culture and uses Brazilian Portuguese as the fallback.
-
-Collects system, hardware, and network details; fields depend on Windows and drivers. Public IP lookup queries api.ipify.org. Run as administrator for broader collection and redact identifiers/public IP before sharing.
-
-### Idiomas disponíveis / Available languages
-
-| Language | Locale | Used for |
-|---|---|---|
-| Brazilian Portuguese | pt-BR | Brazilian Windows; fallback for unsupported locales |
-| English | en | English Windows |
-| Spanish | es | Spanish Windows |
-| French | fr | French Windows |
-| German | de | German Windows |
-| Italian | it | Italian Windows |
-| Japanese | ja | Japanese Windows |
-| Korean | ko | Korean Windows |
-| Simplified Chinese | zh-CN | Simplified Chinese Windows |
-| Russian | ru | Russian Windows |
-
-To detect the public IP, the tool queries api.ipify.org; it sends only the request needed to retrieve that address, not the local diagnostic report.
+| Language | Locale | Typical system |
+|---|---|
+| Brazilian Portuguese | pt-BR | Brazilian Windows; also the fallback language. |
+| English | en | English Windows. |
+| Spanish | es | Spanish Windows. |
+| French | fr | French Windows. |
+| German | de | German Windows. |
+| Italian | it | Italian Windows. |
+| Japanese | ja | Japanese Windows. |
+| Korean | ko | Korean Windows. |
+| Simplified Chinese | zh-CN | Simplified Chinese Windows. |
+| Russian | ru | Russian Windows. |
 
 ## 👨‍💻 About the Author
 
