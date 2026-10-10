@@ -27,6 +27,4 @@
 
 - Corrige a acentuação do título da janela do diagnóstico em todos os idiomas suportados.
 
-- Corrige a acentuação do título da janela do diagnóstico em todos os idiomas suportados.
-
-- Exibe o título da janela em capitalização normal, mantendo o cabeçalho interno em destaque.
+- Formata o título da janela com a inicial de cada palavra em maiúscula e as demais letras em minúscula; o cabeçalho interno continua em maiúsculas.

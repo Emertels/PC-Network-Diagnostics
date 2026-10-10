@@ -27,6 +27,4 @@
 
 - Fixes the diagnostic window title accents in all supported languages.
 
-- Fixes the diagnostic window title accents in all supported languages.
-
-- Shows the window title in sentence case while retaining the report heading style.
+- Uses an initial capital on each window-title word and lowercase for the remaining letters; the report heading remains uppercase.
