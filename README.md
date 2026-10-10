@@ -9,6 +9,7 @@
 ![Versão](https://img.shields.io/badge/Vers%C3%A3o-v1.0.0-blue?style=for-the-badge)
 ![Licença](https://img.shields.io/badge/Licen%C3%A7a-MIT-green?style=for-the-badge)
 ![Plataforma](https://img.shields.io/badge/Plataforma-Windows%2010%20%7C%2011-0078D4?style=for-the-badge)
+![Idiomas](https://img.shields.io/badge/Idiomas-10%20Nativos-2ea44f?style=for-the-badge)
 ![Diagnóstico](https://img.shields.io/badge/Motor-WMI%20%2F%20CIM-blueviolet?style=for-the-badge)
 
 </div>
@@ -27,6 +28,42 @@ Utilitário em Batch de diagnóstico completo de hardware, integridade de compon
 1. Baixe o pacote na seção [Releases](https://github.com/Emertels/PC-Network-Diagnostics/releases/latest).
 2. Execute `PC-Network-Diagnostics.bat` como Administrador.
 3. Escolha o módulo de diagnóstico no menu interativo para visualizar o relatório.
+
+---
+## 🌐 Suporte Multilíngue (10 Idiomas Nativos)
+
+A ferramenta possui suporte completo e integrado a **10 idiomas**, detectando automaticamente a cultura de idioma configurada no seu sistema operacional Windows:
+
+| Idioma | Código | Detecção |
+| :--- | :--- | :--- |
+| 🇧🇷 **Português (Brasil)** | `pt-BR` | Padrão / Automático |
+| 🇺🇸 **English** | `en` | Automático |
+| 🇪🇸 **Español** | `es` | Automático |
+| 🇫🇷 **Français** | `fr` | Automático |
+| 🇩🇪 **Deutsch** | `de` | Automático |
+| 🇮🇹 **Italiano** | `it` | Automático |
+| 🇯🇵 **日本語 (Japonês)** | `ja` | Automático |
+| 🇰🇷 **한국어 (Coreano)** | `ko` | Automático |
+| 🇨🇳 **简体中文 (Chinês Simplificado)** | `zh-CN` | Automático |
+| 🇷🇺 **Русский (Russo)** | `ru` | Automático |
+
+### 💡 Como Alternar ou Forçar o Idioma
+Caso deseje rodar a ferramenta em um idioma diferente daquele definido no seu Windows, basta configurar a variável de ambiente `EMERTELS_LANGUAGE`:
+
+**No Prompt de Comando (CMD / Batch):**
+```cmd
+set EMERTELS_LANGUAGE=en
+call PC-Network-Diagnostics.bat
+```
+
+**No PowerShell:**
+```powershell
+$env:EMERTELS_LANGUAGE = "en"
+.\PC-Network-Diagnostics.bat
+```
+
+> [!TIP]
+> Se o idioma do sistema não estiver na lista dos 10 suportados, a ferramenta utiliza com segurança o fallback em **Português (Brasil)** ou **English**.
 
 ---
 ## 👨‍💻 Sobre o Autor
