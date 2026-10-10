@@ -23,7 +23,7 @@ $L=@{
 'ru'=@('ПОЛНАЯ ДИАГНОСТИКА КОМПЬЮТЕРА И КАЧЕСТВА СЕТИ','Сеанс начат','Обнаруженный язык','Операционная система','Материнская плата и BIOS','Процессор','Память','Накопитель','Видеокарта','Монитор','Активная сеть','Локальный IP','Маска подсети','Основной шлюз','MAC-адрес','Адаптер','Производитель','Публичный IP','Скорость соединения','Проверка DNS','Задержка','Потеря пакетов','Джиттер','Статистика ping','Трафик интерфейса','Качество соединения','Хорошее','Среднее','Плохое','Нет соединения','Недоступно','Неизвестно','Не удалось собрать часть данных.','Сбор завершён.')
 }
 $T=$L[$lang]
-try { $Host.UI.RawUI.WindowTitle = $T[0] + ' v1.0.0' } catch { }
+try { $windowTitle = $T[0].Substring(0,1).ToUpperInvariant() + $T[0].Substring(1).ToLowerInvariant(); $Host.UI.RawUI.WindowTitle = $windowTitle + ' v1.0.0' } catch { }
 $X=@{
  'pt-BR'=@('Versão','Tempo ligado','Versão do BIOS','Frequência / núcleos / threads','Pressione Enter para fechar.')
  'en'=@('Version','Uptime','BIOS version','Frequency / cores / threads','Press Enter to close.')
