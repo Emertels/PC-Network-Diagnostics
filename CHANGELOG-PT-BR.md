@@ -24,3 +24,7 @@
 - A documentação de uso, dependências e arquivos necessários foi revisada para corresponder ao comportamento atual do projeto.
 
 - Padroniza a seção do autor, projetos e comunidades oficiais conforme o repositório de referência Antigravity.
+
+- Corrige a acentuação do título da janela do diagnóstico em todos os idiomas suportados.
+
+- Corrige a acentuação do título da janela do diagnóstico em todos os idiomas suportados.

@@ -1,6 +1,6 @@
 @echo off
 setlocal DisableDelayedExpansion
-title Diagnóstico Completo do Computador v1.0.0
+title PC Diagnostics v1.0.0
 set "PC_DIAG_BATCH=%~f0"
 powershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -Command "$f=$env:PC_DIAG_BATCH;$lines=[IO.File]::ReadAllLines($f);$a=[Array]::IndexOf($lines,'#DIAGNOSTIC_PAYLOAD');$b=[Array]::IndexOf($lines,'#COLLECTOR_PAYLOAD');if($a -lt 0 -or $b -le $a){exit 3};$main=[scriptblock]::Create(($lines[($a+1)..($b-1)] -join [Environment]::NewLine));$collect=[scriptblock]::Create(($lines[($b+1)..($lines.Length-1)] -join [Environment]::NewLine));& $main $collect"
 set "RESULT=%ERRORLEVEL%"
@@ -23,6 +23,7 @@ $L=@{
 'ru'=@('ПОЛНАЯ ДИАГНОСТИКА КОМПЬЮТЕРА И КАЧЕСТВА СЕТИ','Сеанс начат','Обнаруженный язык','Операционная система','Материнская плата и BIOS','Процессор','Память','Накопитель','Видеокарта','Монитор','Активная сеть','Локальный IP','Маска подсети','Основной шлюз','MAC-адрес','Адаптер','Производитель','Публичный IP','Скорость соединения','Проверка DNS','Задержка','Потеря пакетов','Джиттер','Статистика ping','Трафик интерфейса','Качество соединения','Хорошее','Среднее','Плохое','Нет соединения','Недоступно','Неизвестно','Не удалось собрать часть данных.','Сбор завершён.')
 }
 $T=$L[$lang]
+try { $Host.UI.RawUI.WindowTitle = $T[0] + ' v1.0.0' } catch { }
 $X=@{
  'pt-BR'=@('Versão','Tempo ligado','Versão do BIOS','Frequência / núcleos / threads','Pressione Enter para fechar.')
  'en'=@('Version','Uptime','BIOS version','Frequency / cores / threads','Press Enter to close.')
